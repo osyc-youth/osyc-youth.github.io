@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="de">
+    <head>
+        {% include meta_tags/meta.html %}
+        {% include externals/styling.html %}
+    </head>
+    <body>
+        {% include page/navigation.html %}
+            <section id="greating">
+                <h1 id="slogan">Your Sailing Adventure</h1>
+                <div class="downWrapper">
+                    <a id="down" href="#DerTurn" ><img id="arrow" src="assets/img/compass.webp" alt="Arrow - Go to next Section"style="width:60px;"></a>
+                    <div class="vline"></div>
+                </div>
+            </section>
+        </header>
+        
+        
+        <div class="wrapper" id="wrapper">
+            {{ content }}
+        </div>
+        <!-- Footer -->
+        {% include page/footer.html %}
+        {% include externals/scripting.html %}
+    </body>
+</html>
