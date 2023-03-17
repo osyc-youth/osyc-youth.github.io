@@ -46,6 +46,9 @@ nav{
 .wrapper{
     padding: 0 5%;
 }
+section{
+    margin: 2rem 0rem;
+}
 
 header{
     /* background-image: url("../img/prem_cover1.jpg"); */
@@ -407,8 +410,9 @@ footer{
    .sponsorenWrapper{
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
     flex-wrap: wrap;
+    align-items: center;
    }
    .sponsorenWrapper a {
     text-align: center;

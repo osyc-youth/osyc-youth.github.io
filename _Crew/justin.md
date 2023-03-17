@@ -1,8 +1,8 @@
 ---
 name: Justin
-funktion: Jugensprecher
+funktion: Jugendsprecher
 email: crew@osyc-youth.club
-foto: /assets/img/crewFotos/clemens.webp
+foto: /assets/img/crewFotos/justin.webp
 erklaerung: Ist der Justin
 priority: 2
 aktive: true
