@@ -91,6 +91,10 @@ h1,h2,h3,h4{
     font-family: 'callunabold',serif;
 }
 
+footer h3{
+    font-family: 'callunabold',serif;
+}
+
 
 h2 {
     margin-bottom: 0rem;
@@ -102,8 +106,11 @@ section>h3{
 }
 
 
-p,li,a,h3{
+p,li,a,h3,h2{
     font-family: 'newhaasunicalight',sans-serif;
+}
+h2>i{
+    font-family:  'callunabold',serif;
 }
 
 body{
@@ -117,7 +124,7 @@ nav{
     padding: 0 5%;
 }
 section{
-    margin: 2rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
 }
 
 header{
@@ -657,6 +664,36 @@ a.blueButton >img:hover {
 
     .subsection{
         padding: 2rem 2rem;
+    }
+    .headingBox{
+        max-width: 16rem;
+        color: white;
+    }
+    .headingBox>h2{
+        text-align: left;
+        font-size: 2.5rem;
+        color: #fff;
+    }
+    .introSection{
+        background-image: url("/assets/img/water.jpeg");
+        background-color: var(--subtitle-color);
+        background-size:cover;
+    }
+    .introFlex{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 5rem;
+    }
+    .slogans {
+
+    }
+    .slogans > p{
+        color: white;
+        font-size: 4.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
 @media (min-width: 1126px) {
