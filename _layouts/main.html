@@ -4,17 +4,20 @@ layout: default
 
 {{ content }}
 <main>
-    <section id="DerTurn">
-        <section class="subsection introSection">
+    <section id="Turn">
+        <section class="subsection" id="introSection">
             <div class="introFlex">
                 <div class="headingBox">
-                    <h2><i>Der chilligste</i> <b>Studententurn</b></h2>
-                    <p>Kurz vor Semesterstart nochmal eine Woche Sonne, Segeln, Fun: Eine kleine Flotille aus Booten voller Studierenden, die sich von Bucht zu Bucht bewegt und auf der sich Segeln, Schwimmen und Sippen abwechseln. Und das auch noch zum echt leistbaren Preis. Überzeugt? Join our crew! Wann: 16. – 23. September 2023 Wo: Kroatische Küste Unsere Flotille besteht aus mehreren Segelbooten für jeweils 6-8 Leute, wobei jeweils ein erfahrener Skip- per*in an Bord ist. Daher ist es auch völlig egal, ob du schon segeln kannst oder nicht: Es gibt genug Leute und Erfahrung an Bord, dass alles safe and sound ist. Unter Tags wird gesegelt und zwischendurch auch einmal entspannt ins Meer gesprungen, sodass wir abends immer an einem anderen Ort sein werden als in der Nacht zuvor. Funfact: Mit dem Boot segeln wir gleichzeitig unser Appartement von A nach B.</p>
+                    <h2><span id="it">Der chilligste</span> <span id="nonit">Segeltrip</span></h2>
+                    <p>Genieße eine Woche Sonne und Segeln mit anderen Studierenden vor dem Semesterstart, vom 16.-23. September 2023 an der kroatischen Küste. Unsere Flotte an Yachten bietet Platz für 8 Leute pro Boot, jeweils mit einem erfahrenen Skipper. Für den Trip ist keine Segelerfahrung notwendig! Unter Tags wird gesegelt und zwischendurch auch einmal entspannt ins Meer gesprungen, sodass wir abends immer an einem anderen Ort sein werden als in der Nacht zuvor. Für den einen oder anderen Drink ist natürlich auch immer Zeit.
+                    Der Trip wird durch den Segelclub OSYC gefördert und wird daher zu Studentenfreundlichen Preisen angeboten. Wenn sich das interresant für dich anhört, melde dich beim unterstehenden Link an.</p>
+
                 </div>
                 <div class="slogans">
-                    <p><b>3 Yachten</b></p>
-                    <p><b>Erfahrene Skipper</b></p>
-                    <p><b>1 Woche Segeln</b></p>
+                    <p>20+ Studierende</p>
+                    <p>3 Yachten</p>
+                    <p>7 Tage</p>
+                    <p>3 Skipper</p>
                 </div>
             </div>
         </section>
@@ -51,7 +54,7 @@ layout: default
                 <p>Nicht Kommerziel und Nachhaltig</p>
             </div>
         </div> -->
-            <section class="subsection background-lightgray">
+            <section id="Anmeldung" class="subsection background-lightgray">
             <h3 class="call-to-action">So einfach kannst du mitsegeln</h3>
             <div class="flex-container-steps">
                 <div class="flex-item-steps">
@@ -76,7 +79,7 @@ layout: default
             </div>
             
             <div class="buttonContainter">
-                <a class="blueButton" href="https://app.formbricks.com/s/cli34qe5z0cfqmt0hozuoovl8"><img alt="Adobe Acrobat Logo"src="/assets/img/calendar.svg">Anmelden zum Infoevent </a>
+                <a class="blueButton" href="https://app.formbricks.com/s/cli34qe5z0cfqmt0hozuoovl8"><i class="ri-calendar-event-fill ri-12x "></i> Anmelden zum Infoevent </a>
             </div>
         </section>
     </section>
@@ -85,7 +88,7 @@ layout: default
         <h2>Upcoming Events</h2>
     </section>
 
-    <section id="DieCrew">
+    <section id="UeberUns">
         <h2>Die Crew</h2>
         <div class="chargenFlex">
             {% assign sortedCrew = site.Crew | sort: 'priority'%}

@@ -1,5 +1,6 @@
 :root {
-    --accent-color: #FACA35;
+    --accent-color: #d22027;
+    --accent-color-light: #D63238;
     --slogan-color: white;
     --subtitle-color: #1673bd;
     --link-color: #4d6d8d;
@@ -19,29 +20,41 @@
 
 @font-face {
     font-display: swap;
-    font-family: 'callunabold';
+    font-family: 'calluna';
     src: url('/assets/fonts/calluna/Calluna-Bold.woff2') format('woff2'),
          url('/assets/fonts/calluna/Calluna-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
+@font-face {
+    font-display: swap;
+    font-family: 'calluna';
+    src: url('/assets/fonts/calluna/Calluna-Italic.woff2') format('woff2'),
+         url('/assets/fonts/calluna/Calluna-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
 
 @font-face {
     font-display: swap;
-    font-family: 'newhaasunicathin';
-    src: url('/assets/fonts/newhaasunica/Neue-Haas-Unica-W1G-Thin.woff2') format('woff2'),
-         url('/assets/fonts/newhaasunica/Neue-Haas-Unica-W1G-Thin.woff') format('woff');
-    font-weight: normal;
+    font-family: 'acumin-pro';
+    src: url('/assets/fonts/acumin-pro/acumin-pro-extra-condensed-bold.woff2') format('woff2'),
+         url('/assets/fonts/acumin-pro/acumin-pro-extra-condensed-bold.woff') format('woff');
+    font-weight: 700;
+    font-stretch: condensed;
     font-style: normal;
 }
 @font-face {
     font-display: swap;
-    font-family: 'newhaasunicalight';
-    src: url('/assets/fonts/newhaasunica/Neue-Haas-Unica-W1G-Light.woff2') format('woff2'),
-         url('/assets/fonts/newhaasunica/Neue-Haas-Unica-W1G-Light.woff') format('woff');
-    font-weight: normal;
+    font-family: 'acumin-pro';
+    src: url('/assets/fonts/acumin-pro/acumin-pro-light.woff2') format('woff2'),
+         url('/assets/fonts/acumin-pro/acumin-pro-light.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
 }
+
+
 
 @font-face {
     font-family: "remixicon";
@@ -63,6 +76,7 @@
 .ri-xs { font-size: .75em; }
 .ri-sm { font-size: .875em; }
 .ri-1x { font-size: 1em; vertical-align: -0.27em;}
+.ri-12x { font-size: 1.2em; }
 .ri-2x { font-size: 2em; }
 .ri-3x { font-size: 3em; }
 .ri-4x { font-size: 4em; }
@@ -77,7 +91,7 @@
 .ri-sailboat-line:before { content: "\f0ad"; }
 .ri-check-line:before { content: "\eb7b"; }
 .ri-pass-valid-line:before { content: "\f38b"; }
-
+.ri-calendar-event-fill:before { content: "\eb24"; }
 
   
 html{
@@ -88,11 +102,13 @@ h1,h2,h3,h4{
     text-align: center;
     color: var(--logo-color);
     font-size: 200%;
-    font-family: 'callunabold',serif;
+    font-family: 'calluna',serif;
+    font-weight: bold;
 }
 
 footer h3{
-    font-family: 'callunabold',serif;
+    font-family: 'calluna',serif;
+    font-weight: bold;
 }
 
 
@@ -107,11 +123,11 @@ section>h3{
 
 
 p,li,a,h3,h2{
-    font-family: 'newhaasunicalight',sans-serif;
+    font-family: 'acumin-pro',sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
-h2>i{
-    font-family:  'callunabold',serif;
-}
+
 
 body{
     margin: 0em;    
@@ -163,19 +179,20 @@ a:visited{
 #arrow{
     padding: 1rem;
 }
-#down { 
+.down { 
     text-align: center;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(252deg) brightness(103%) contrast(104%);
     display: block;
+    margin-bottom:1rem ;
 }
+
 .vline {
     border-left: 1px solid white;
     height: 15vh;
     text-align: center;
   }
 
-#down:hover{
-    filter: invert(94%) sepia(84%) saturate(1465%) hue-rotate(326deg) brightness(100%) contrast(96%);
+.down:hover{
+    fill: var(--accent-color);
     transition: all .4s ease-in-out;
 }
 
@@ -192,7 +209,7 @@ a:visited{
 #slogan{
     font-family: 'onesignature',sans-serif;
     color: var(--slogan-color);
-    font-size: 5rem;
+    font-size: 6rem;
     width: max-content;
     display: inline;
 }
@@ -506,11 +523,11 @@ div.buttonContainter > a.blueButton{
 a.blueButton{
     text-align: center;
     padding: 0.5rem 1rem;
-    border:1px solid transparent;
-    background-color: var(--subtitle-color);
+    border:1px solid var(--accent-color);
+    background-color: white;
     font-weight: normal;
     text-decoration: none;
-    color: white;
+    color: var(--accent-color);
     border-radius: 5px;
     display:flex;
     align-items: center;
@@ -519,16 +536,14 @@ a.blueButton{
 }
 
 a.blueButton:hover {
-    background-color: var(--link-color);
+    color: white;
+    background-color: var(--accent-color);
 }
 
 a.blueButton >img {
     height: 1.5rem;
     width: 1.5rem;
     padding-right: 0.5rem;
-}
-a.blueButton >img:hover {
-    filter: invert(10%);
 }
 
  .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
@@ -640,7 +655,7 @@ a.blueButton >img:hover {
         font-size: 3em;
         width: 70px;
         height: 70px;
-        color: var(--subtitle-color);
+        color: var(--accent-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -655,8 +670,9 @@ a.blueButton >img:hover {
     
     .call-to-action{
         text-align: center;
-        font-size: 3rem;
+        font-size: 4rem;
         margin-bottom: 1rem;
+        color:black;
     }
     .background-lightgray{
         background-color: #eaeaea;
@@ -671,10 +687,25 @@ a.blueButton >img:hover {
     }
     .headingBox>h2{
         text-align: left;
-        font-size: 2.5rem;
+        font-size: 4rem;
         color: #fff;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
     }
-    .introSection{
+    #nonit{
+        font-family: 'acumin-pro',sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    #it{
+        font-family:  'calluna',serif;
+        font-style: italic;
+        font-size: 2.2rem;
+    }
+
+    #introSection{
         background-image: url("/assets/img/water.jpeg");
         background-color: var(--subtitle-color);
         background-size:cover;
@@ -682,24 +713,38 @@ a.blueButton >img:hover {
     .introFlex{
         flex-wrap: wrap;
         display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        gap: 5rem;
+        justify-content: center;
+        gap: 0rem;
     }
     .slogans {
+        padding-top: 1rem;
 
     }
     .slogans > p{
         color: white;
-        font-size: 4.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        font-size: 3rem;
+        margin:0rem;
+        padding-top: 0rem;
+        padding-bottom: 1rem;
+        padding-right: 2rem;
+        line-height: 7rem;
+        border-bottom: 1px solid  rgba(255, 255, 255, 0.3);;
+        font-family: 'acumin-pro',sans-serif;
+        font-weight: 700;
+        font-stretch: condensed;
+        text-transform: uppercase;
     }
 
 @media (min-width: 1126px) {
     .subsection {
-        padding-left: 15%;
-        padding-right: 15%;
+        padding:  8rem 15% ;
+    }
+    .slogans p{
+        padding-right: 15rem;
+        font-size: 7rem;
+    }
+    .introFlex{
+        justify-content: space-between;
     }
     
     .header{
@@ -761,5 +806,10 @@ a.blueButton >img:hover {
 
     .header .menu-icon {
         display: none;
+    }
+    #introSection{
+        padding-bottom: 8rem;
+        padding-top: 8rem;
+        padding-right: 0rem;
     }
 }
