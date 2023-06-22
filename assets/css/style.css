@@ -235,9 +235,12 @@ a:hover{
 #slogan{
     font-family: 'onesignature',sans-serif;
     color: var(--slogan-color);
-    font-size: 6rem;
+    font-size: 4.5rem;
+    font-weight: normal;
     width: max-content;
     display: inline;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .boxShadow {
@@ -849,6 +852,10 @@ a.blueButton >img {
     }
     .headingBox>h2{
         font-size: 3rem;
+    }
+
+    #slogan{
+        font-size: 6rem;
     }
     
     .header{
