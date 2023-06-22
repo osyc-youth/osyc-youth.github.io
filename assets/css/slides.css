@@ -1,9 +1,9 @@
 .nonslider {
   width: 100vw;
-  height: 60vh;
+  min-height: 390px;
   background-size: cover;
   position: relative;
-  background-image: url('/assets/img/slideShow/2.webp');
+  background-image: url('/assets/img/water.jpeg');
  }
 
 /* Slideshow */
