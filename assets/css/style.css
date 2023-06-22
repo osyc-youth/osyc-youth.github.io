@@ -54,6 +54,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-display: swap;
+    font-family: 'acumin-pro';
+    src: url('/assets/fonts/acumin-pro/acumin-pro-semibold.woff2') format('woff2'),
+         url('/assets/fonts/acumin-pro/acumin-pro-semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
 
 
 @font-face {
@@ -92,6 +102,8 @@
 .ri-check-line:before { content: "\eb7b"; }
 .ri-pass-valid-line:before { content: "\f38b"; }
 .ri-calendar-event-fill:before { content: "\eb24"; }
+.ri-time-line:before { content: "\f20f"; }
+.ri-map-pin-2-line:before { content: "\ef0a"; }
 
   
 html{
@@ -115,16 +127,17 @@ footer h3{
 h2 {
     margin-bottom: 0rem;
 }
-section>h3{
-    margin-top: 0rem;
-    font-family: 'onesignature',sans-serif;
-    color: var(--subtitle-color);
-}
 
 
 p,li,a,h3,h2{
     font-family: 'acumin-pro',sans-serif;
     font-weight: 300;
+    font-style: normal;
+}
+
+p strong{
+    font-family: 'acumin-pro',sans-serif;
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -153,15 +166,14 @@ header{
 }
 
 
-a:link{
-    color: var(--link-color);
+a{
+    color: var(--subtitle-color);
+    text-decoration: none;
+    
 }
 a:hover{
-    color: var(--link-hover-color);
-    transition: all .2s ease-in-out;
-}
-a:visited{
-    color: var(--link-color);
+    transition: all .4s ease-in-out;
+    color: var(--link-hover-color);   
 }
 
 
@@ -513,7 +525,7 @@ div.buttonContainter{
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0rem;
     flex-wrap: wrap;
 }
 
@@ -673,6 +685,8 @@ a.blueButton >img {
         font-size: 4rem;
         margin-bottom: 1rem;
         color:black;
+        margin-top: 0rem;
+        font-family: 'onesignature',sans-serif;
     }
     .background-lightgray{
         background-color: #eaeaea;
@@ -705,7 +719,7 @@ a.blueButton >img {
         font-size: 2.2rem;
     }
 
-    #introSection{
+    #Turn{
         background-image: url("/assets/img/water.jpeg");
         background-color: var(--subtitle-color);
         background-size:cover;
@@ -718,6 +732,7 @@ a.blueButton >img {
     }
     .slogans {
         padding-top: 1rem;
+        width: 100%;
 
     }
     .slogans > p{
@@ -735,17 +750,88 @@ a.blueButton >img {
         text-transform: uppercase;
     }
 
+    div.event-new{
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        display: flex;
+        align-items: flex-start
+    }
+    
+    div.event-date{
+        max-width: 4em;
+        text-align:center;
+        padding-right: 2rem;
+    }
+    
+    div.day-of-week{
+        font-size:0.75rem;
+        color: var(--link-color);
+        font-family: 'acumin-pro',sans-serif;
+        font-weight: 700;
+    }
+    
+    div.day{
+        font-size:2rem;
+        font-family: 'calluna',serif;
+        font-weight: bold;
+        margin-top: -0.35rem;
+        margin-bottom: -0.35rem;
+    }
+    div.event-details > h3{
+        font-size:1.2rem;
+        margin-bottom: 0.2rem;
+        margin-top: -0.4rem;
+        text-align: left;
+        font-family: 'acumin-pro',sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    div.event-details > p.info-new{
+        font-size:0.9rem;
+        display: flex;
+        align-items: center;
+        color: var(--link-color);
+        margin-top: 0;
+        margin-bottom: 0.2rem;
+    } 
+    div.event-details > p.details{
+        font-size:1rem;
+        margin-top: 0.2rem;
+    } 
+    div.event-details > p > i{
+        padding-right: 0.5rem;
+        color: var(--link-color);
+    }
+    
+    div.event-details > p {
+        margin-top: 0.5rem;
+    }
+    em{
+        font-weight: bold;
+    }
+    
+    #Events h2{
+        margin-bottom: 2rem;
+    }
+
+    #Events{
+        border-bottom: 4px solid var(--subtitle-color);
+    }
+
 @media (min-width: 1126px) {
     .subsection {
-        padding:  8rem 15% ;
+        padding:  4rem 15% ;
     }
     .slogans p{
-        padding-right: 15rem;
+        padding-right: 12rem;
         font-size: 7rem;
         line-height: 7rem;
     }
     .introFlex{
         justify-content: space-between;
+    }
+    .slogans{
+        width: 60%;
     }
     .headingBox>h2{
         font-size: 3rem;

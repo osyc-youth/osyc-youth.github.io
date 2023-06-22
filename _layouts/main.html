@@ -4,13 +4,12 @@ layout: default
 
 {{ content }}
 <main>
-    <section id="Turn">
-        <section class="subsection" id="introSection">
+        <section class="subsection" id="Turn">
             <div class="introFlex">
                 <div class="headingBox">
-                    <h2><span id="it">Der chilligste</span> <span id="nonit">Segeltrip</span></h2>
-                    <p>Genieße eine Woche Sonne und Segeln mit anderen Studierenden vor dem Semesterstart, vom 16.-23. September 2023 an der kroatischen Küste. Unsere Flotte an Yachten bietet Platz für 8 Leute pro Boot, jeweils mit einem erfahrenen Skipper. Für den Trip ist keine Segelerfahrung notwendig! Unter Tags wird gesegelt und zwischendurch auch einmal entspannt ins Meer gesprungen, sodass wir abends immer an einem anderen Ort sein werden als in der Nacht zuvor. Für den einen oder anderen Drink ist natürlich auch immer Zeit.
-                    Der Trip wird durch den Segelclub OSYC gefördert und wird daher zu Studentenfreundlichen Preisen angeboten. Wenn sich das interresant für dich anhört, melde dich beim unterstehenden Link an.</p>
+                    <h2><span id="it">Der perfekt</span> <span id="nonit">Segeltrip</span></h2>
+                    <p>Was am Segelboot der Gewichtstrimm ist, ist im Leben Balance und Ausgeglichenheit. Beim OSYC zählt beides. Daher segelt der Törn auch genau zwischen Spaß und Sport: Er ist gleichzeitig eine Urlaubswoche am Meer mit vielen jungen Leuten rundherum, und ein Training für den Segelsport. <strong>Enjoy ahoi!</strong></p>
+                    <p>Der Törn findet in der letzten Woche vor Semesterbeginn statt, genauer von 23.-30. September. Segeln werden wir an der kroatischen Küste in der Gegend um Hvar. Unsere Flottille an Yachten bietet Platz für 8 Leute pro Boot, jeweils mit einem erfahrenen Skipper. Daher ist für die Teilnahme am Trip auch keine Segelerfahrung nötig, von Anfängern bis Erfahreneren passt alles perfekt! Unter Tags wird gesegelt und zwischendurch auch einmal entspannt ins Meer gesprungen, sodass wir abends immer an einem anderen Ort sein werden als in der Nacht zuvor. Für den einen oder anderen Drink ist natürlich auch immer Zeit. Der studentenfreundliche Preis ist möglich, weil der Trip durch den Segelclub OSYC organisatorisch und finanziell gefördert wird. Wenn sich das interessant für dich anhört, melde dich gern beim Link weiter unten an.</p>
 
                 </div>
                 <div class="slogans">
@@ -55,7 +54,7 @@ layout: default
             </div>
         </div> -->
             <section id="Anmeldung" class="subsection background-lightgray">
-            <h3 class="call-to-action">So einfach kannst du mitsegeln</h3>
+            <h2 class="call-to-action">So einfach kannst du mitsegeln</h2>
             <div class="flex-container-steps">
                 <div class="flex-item-steps">
                     <div class="big-number">
@@ -82,14 +81,30 @@ layout: default
                 <a class="blueButton" href="https://app.formbricks.com/s/cli34qe5z0cfqmt0hozuoovl8"><i class="ri-calendar-event-fill ri-12x "></i> Anmelden zum Infoevent </a>
             </div>
         </section>
-    </section>
 
-    <section id="Events">
+    <section id="Events"class="subsection">
         <h2>Upcoming Events</h2>
+        <div class="event-new">
+            <div class="event-date">
+                <div class="day-of-week">
+                    Mi
+                </div>
+                <div class="day">5</div>
+            </div>
+            <div class="event-details">
+                <h3>Erstes Crew Meeting und Anmeldung</h3>
+                <p class="info-new"> <i class="ri-time-line"></i> 05.07.2023 18:00<span>
+
+        </span> </p>
+                <p class="info-new"> <i class="ri-map-pin-2-line"></i>  <span><b>Pizzeria Riva Summerstage</b></span></p>
+                <p>Bei diesem Event könnt ihr alle Teilnehmer kennen lernen, beim OSYC Mitglied werden und euch zum Turn anmelden.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="UeberUns">
-        <h2>Die Crew</h2>
+    <section id="UeberUns"class="subsection">
+            <h2>Über Uns</h2>
+            <p>Wir sind eine Gruppe von jungen Seglern, welche Teil es <a href="https://www.osyc.at/" target="_blank"> OSYC - Austrian Offshore Yacht Club</a> sind. Der OSYC ist einer der größten Hochsee Yacht Clubs in Österreich. Unser Ziel ist es mit dem Projekt <a href="/" target="_blank">OSYC Youth</a> Studenten für das Hochseesegeln zu begeistern und den Einstieg in die Welt des Segelns zu erleichtern. Wir veranstallten jährlich einen einwögchigen Segelturn, welcher vom Club gefördert wird und von erfahreren Skippern begleitet wird. Unser Skipper und Organsitatinsteam stellt sich aus folgenden Personen zusammen:</p>
         <div class="chargenFlex">
             {% assign sortedCrew = site.Crew | sort: 'priority'%}
             {% assign sortedAktivCrew  = sortedCrew  | where:"aktive","true"%}
