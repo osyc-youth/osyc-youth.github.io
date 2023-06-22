@@ -736,7 +736,7 @@ a.blueButton >img {
         font-size: 2.2rem;
     }
 
-    #Turn{
+    #Toern{
         background-image: url("/assets/img/water.jpeg");
         background-color: var(--subtitle-color);
         background-size:cover;
