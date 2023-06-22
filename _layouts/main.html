@@ -110,7 +110,7 @@ layout: default
             {% assign sortedAktivCrew  = sortedCrew  | where:"aktive","true"%}
             {% for crew in sortedAktivCrew %}
                 <div class="chargenFlexElement">
-                    <img src="{{crew.foto}}" alt="" class="rounded"> 
+                    <img src="{{crew.foto}}" alt="{{ crew.name }} - {{ crew.funktion }}" class="rounded"> 
                     <h3>{{ crew.name }} </h3>
                     <h4>{{ crew.funktion }}</h4>
                     <p>{{ crew.erklaerung }}</p>
