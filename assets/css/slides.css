@@ -1,3 +1,11 @@
+.nonslider {
+  width: 100vw;
+  height: 60vh;
+  background-size: cover;
+  position: relative;
+  background-image: url('/assets/img/slideShow/2.webp');
+ }
+
 /* Slideshow */
 
 .slider {

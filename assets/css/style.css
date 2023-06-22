@@ -135,6 +135,21 @@ p,li,a,h3,h2{
     font-style: normal;
 }
 
+#impressum > h3 {
+    font-family: 'acumin-pro',sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+#slognaImpressum{
+    text-align: center;
+    color: var(--accent-color);
+}
+
 p strong{
     font-family: 'acumin-pro',sans-serif;
     font-weight: 600;
@@ -158,7 +173,6 @@ section{
 
 header{
     /* background-image: url("../img/prem_cover1.jpg"); */
-    min-height: 100vh;
     background-size: cover;
     text-align: center;
     color: white;
@@ -693,7 +707,7 @@ a.blueButton >img {
     }
 
     .subsection{
-        padding: 4rem 2rem;
+        padding: 3rem 2rem;
     }
     .headingBox{
         max-width: 16rem;
