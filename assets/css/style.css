@@ -737,7 +737,7 @@ a.blueButton >img {
     }
 
     #Toern{
-        background-image: url("/assets/img/water.jpeg");
+        background-image: url("/assets/img/water.webp");
         background-color: var(--subtitle-color);
         background-size:cover;
     }
