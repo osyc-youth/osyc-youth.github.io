@@ -775,7 +775,7 @@ a.blueButton >img {
     }
     
     div.event-date{
-        max-width: 4em;
+        min-width: 4em;
         text-align:center;
         padding-right: 2rem;
     }
@@ -792,7 +792,7 @@ a.blueButton >img {
         font-family: 'calluna',serif;
         font-weight: bold;
         margin-top: -0.35rem;
-        margin-bottom: -0.35rem;
+        margin-bottom: 0rem;
     }
     div.event-details > h3{
         font-size:1.2rem;
