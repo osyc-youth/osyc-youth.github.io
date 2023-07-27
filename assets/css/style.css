@@ -72,6 +72,25 @@
         url("/assets/fonts/remixicon/remixicon.woff") format("woff");
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'customIcons';
+    src: url('/assets/fonts/customIcons/customIcons.woff2') format('woff2'),
+         url('/assets/fonts/customIcons/customIcons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*='icon-']:before{
+	display: inline-block;
+   font-family: 'customIcons';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+.icon-adobe:before{content:'\0044'; vertical-align: -0.27em;}
+
 [class^="ri-"], [class*=" ri-"] {
     font-family: 'remixicon' !important;
     font-style: normal;
@@ -561,6 +580,7 @@ a.blueButton{
     display:flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 0.5rem;
     transition:  all .4s ease-in-out;
 }
 
